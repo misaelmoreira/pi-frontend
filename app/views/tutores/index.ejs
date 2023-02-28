@@ -1,0 +1,36 @@
+<%- include('../shared/header') %>
+
+<div class="container">
+    <%- include('../shared/home') %>
+   <h1>Tutor</h1> 
+   <p>Dados do Tutor na API</p>
+
+   <input type="button" id="novo-registro" onclick="window.location = '/tutores/novo'" value="Novo" />
+   <table>
+        <tr>
+            <td>ID</td>
+            <td>Nome</td>
+            <td>Login</td>
+            <td>Senha</td>
+            <td>E-mail</td>
+            <td class="alterar">Alterar</td>
+            <td class="excluir">Excluir</td>
+        </tr>
+       <% for(var i = 0; i < tutor.length; i++){ 
+           var tutor = tutor[i];           
+        %>
+       <tr>
+           <td><%= tutor.id %></td>
+           <td><%= tutor.nome %></td>
+           <td><%= tutor.login %></td>
+           <td><%= tutor.senha %></td>
+           <td><%= tutor.email %></td>
+           <td><input type="button" onclick="window.location = '/tutores/<%= tutor.id %>/editar'" value="Alterar" /></td>
+           <td><input type="button" onclick= "excluir(<%= tutor.id %>, '/tutores/<%= tutor.id %>/excluir')" value="Excluir" /></td>
+        </tr>
+        <% } %>
+   </table>
+    
+</div>
+
+<%- include('../shared/footer') %>
