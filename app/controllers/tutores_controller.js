@@ -3,7 +3,7 @@ var Tutor = require("../models/tutor");
 var TutoresController = {
     index: function(req, res, next) {
         Tutor.todos(function(tutores){
-            res.render('tutores/index', { 
+            res.render('./tutores/index', { 
                 title: 'trazer os dados da API',
                 tutores: tutores
             });            
@@ -65,7 +65,7 @@ var TutoresController = {
     excluir: function(req, res, next) {
         var tutor = new Tutor();
         tutor.id = req.params.id;
-        tutor.excluir(function(retorno){                      
+        tutor.excluir(function(retorno) {                      
             if(retorno.erro){
                 res.redirect('/tutores/novo?erro=' + retorno.mensagem); 
             } 

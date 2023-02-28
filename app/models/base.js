@@ -3,7 +3,7 @@ var NodeCache = require("node-cache");
 var myCache = new NodeCache();
 
 var Base = function(){};
-Base.prototype.baseHost = process.env.HOST_CMS_FRONTEND;
+Base.prototype.baseHost = process.env.HOST_CMS_BACKEND;
 
 Base.prototype.salvar = function(callback){
     var data = this;
@@ -120,9 +120,7 @@ Base.prototype.excluir = function(callback){
     });
 };
 
-
-
-Base.prototype.todos = function(callback){   
+Base.prototype.todos = function(callback){     
     request.get({ 
         url: this.baseHost + "/" + this.restName + ".json" }, function(error, response, body){
             var json = JSON.parse(response.body);

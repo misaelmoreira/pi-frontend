@@ -16,8 +16,7 @@ var Usuario = function(usuario){
         this.login = "";
         this.senha = "";
         this.email = "";
-    }    
-    
+    }
 };
 
 Usuario.prototype = new Base();

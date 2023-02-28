@@ -4,11 +4,11 @@
 
    <h1>Tutor</h1> 
    <input type="button" onclick="window.location = '/tutores';" value="Voltar">
-   <form action="/tutores/<%= usuario.id %>/atualizar" method="post">
+   <form action="/tutores/<%= tutor.id %>/atualizar" method="post">
     <fieldset>
-      <legend>Alteração do Usuario: <%= usuario.nome %></legend>
-      <div><%= usuario.erro %></div>
-      <%- include('partials/form', {usuario: usuario})  %>
+      <legend>Alteração do Tutor: <%= tutor.nome %></legend>
+      <div><%= tutor.erro %></div>
+      <%- include('partials/form', {tutor: tutor})  %>
       <input type="submit" value="Atualizar">
     </fieldset>
   </form>      

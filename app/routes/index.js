@@ -7,6 +7,7 @@ var router = express.Router();
 /* GET home page. */
 router.get('/', HomeController.index);
 
+/* Rotas Usuarios */
 router.get('/usuarios', UsuariosController.index);
 router.get('/usuarios/novo', UsuariosController.novo);
 router.post('/usuarios/cadastrar', UsuariosController.cadastrar);
@@ -14,7 +15,7 @@ router.get('/usuarios/:id/editar', UsuariosController.editar);
 router.post('/usuarios/:id/atualizar', UsuariosController.atualizar);
 router.get('/usuarios/:id/excluir', UsuariosController.excluir);
 
-
+/* Rotas Tutores */
 router.get('/tutores', TutoresController.index);
 router.get('/tutores/novo', TutoresController.novo);
 router.post('/tutores/cadastrar', TutoresController.cadastrar);

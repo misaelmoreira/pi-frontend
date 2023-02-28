@@ -3,7 +3,7 @@ var Usuario = require("../models/usuario");
 var UsuariosController = {
     index: function(req, res, next) {
         Usuario.todos(function(usuarios){
-            res.render('usuarios/index', { 
+            res.render('./usuarios/index', { 
                 title: 'trazer os dados da API',
                 usuarios: usuarios
             });            
