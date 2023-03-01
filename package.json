@@ -9,6 +9,7 @@
     "gulp": "node node_modules/gulp/bin/gulp.js"
   },
   "dependencies": {
+    "bootstrap": "^5.2.3",
     "cookie-parser": "~1.4.4",
     "debug": "~2.6.9",
     "dotenv": "^16.0.3",
