@@ -1,11 +1,16 @@
 var express = require('express');
 var HomeController = require('../controllers/home_controller');
+var LoginUserController = require('../controllers/loginUser_controller');
 var UsuariosController = require('../controllers/usuarios_controller');
 var TutoresController = require('../controllers/tutores_controller');
 var router = express.Router();
 
-/* GET home page. */
+/* Rotas home page. */
 router.get('/', HomeController.index);
+
+/* Rotas Login User page. */
+router.get('/loginUser', LoginUserController.index);
+router.post('/loginUser', LoginUserController.autenticar);
 
 /* Rotas Usuarios */
 router.get('/usuarios', UsuariosController.index);

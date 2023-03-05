@@ -56,6 +56,34 @@ Base.prototype.salvar = function(callback){
     });    
 };
 
+Base.prototype.autenticar = function(callback){
+    var data = this;
+    var restName = this.restName;
+    var baseHost = this.baseHost;
+    request.head(baseHost + "/" + restName + ".json", function(){
+        token = this.response.headers.auth_token;
+            request.post({ 
+                url: baseHost + "/" + restName + ".json", 
+                headers: {'auth_token': token }, 
+                form: data
+            }, function(error, response, body){
+                    if( response.statusCode == 200 ) {
+                        callback( {
+                            erro: false
+                        });
+                    }
+                    else{        
+                        var json = JSON.parse(response.body);
+                        callback({
+                            erro: true,
+                            mensagem: json.erro
+                        });
+                    }
+                }
+            );   
+    });    
+};
+
 Base.prototype.buscar = function(callback){
     var id = this.id;
     var restName = this.restName;
