@@ -69,7 +69,8 @@ Base.prototype.autenticar = function(callback){
             }, function(error, response, body){
                     if( response.statusCode == 200 ) {
                         callback( {
-                            erro: false
+                            erro: false,
+                            data: response.body
                         });
                     }
                     else{        

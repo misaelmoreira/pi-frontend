@@ -1,16 +1,15 @@
 var Base = require("./base");
 
-var LoginUser = function(loginUser){
-    this.restName = "loginUser";
+var LoginUser = function (loginUser) {
+  this.restName = "loginUser";
 
-    if(loginUser != undefined){
-        this.loginUser = usuario.loginUser;
-        this.senha = usuario.senha;
-    }
-    else{
-        this.loginUser = "";
-        this.senha = "";
-    }
+  if (loginUser != undefined) {
+    this.loginUser = usuario.loginUser;
+    this.senha = usuario.senha;
+  } else {
+    this.loginUser = "";
+    this.senha = "";
+  }
 };
 
 LoginUser.prototype = new Base();
