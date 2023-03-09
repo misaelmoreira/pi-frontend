@@ -28,7 +28,7 @@ var LoginUserController = {
   },
   deslogar: function (req, res, next) {
     Cookie.remove(res, "usuario");
-    res.redirect("/login");
+    res.redirect("/");
   },
 };
 
