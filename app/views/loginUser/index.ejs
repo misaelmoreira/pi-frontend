@@ -4,8 +4,9 @@
     <!-- Required meta tags -->
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Projeto Integrador</title>
-    <link rel="stylesheet" href="/stylesheets/style.css">    
+    <title>Tela Login</title>
+    <link rel="stylesheet" href="/stylesheets/style.css"> 
+    <link rel="stylesheet" href="/stylesheets/styleLogin.css">     
 
     <!-- Bootstrap CSS -->
     <link
@@ -13,69 +14,38 @@
       rel="stylesheet"
     />
   </head>
-  <body>
-
-    <div class="container mt-5" >
-  <form action="/loginUser" method="post">
-    <div class="form-group">
-      <label for="login">Login</label>
-      <input type="login" class="form-control" id="login" aria-describedby="emailHelp"  name="login" placeholder="Entre com o Login">
-    </div>
-    <div class="form-group">
-      <label for="exampleInputPassword1">Senha</label>
-      <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Senha" name="senha">
-    </div>    
-    <button type="submit" class="mt-3 btn btn-primary" value="Logar">Logar</button>
-    
-    <% if (erro) { %>
-      <div class="alert alert-danger mt-5" role="alert"><%= erro %></div>
-    <% } %>
-        
-  </form>
-
-</div>
 
 <!-- TELA DE LOGIN -->
-
 <body>
   <div class="container-login">
       <div class="img-box">
-          <img src="assets/pic.svg">
+          <img src="/img/image_Login.svg">
       </div>
       <div class="content-box">
-          <div class="form-box">
-              <h2>Entrar</h2>
-              <form>
+          <div class="form-box" style="width: 356px;">
+              <h2 style="font-size: 32px; display: flex; justify-content: start; ">Entrar</h2>
+              <p style="font-size: 16px; margin-top: 25px;">Acesse agora mesmo ou crie uma conta abaixo:</p>
+              <form style="margin-top: 25px;" action="/loginUser" method="post">
                   <div class="input-box">
-                      <span>Usuário</span>
-                      <input type="email" placeholder="@mail.com">
+                      <input type="text" placeholder="E-mail" name="login">
                   </div>
-
                   <div class="input-box">
-                      <span>Senha</span>
-                      <input type="password" placeholder="password">
+                      <input type="password" placeholder="Senha" name="senha">
                   </div>
-
-                  <div class="remember">
-                      <label>
-                          <input type="checkbox"> Lembrar minha senha
-                      </label>
+                  <div class="remember" style="display: flex; justify-content: end;">
                       <a href="#">Esqueceu a Senha?</a>
                   </div>
-
-                  <div class="input-box">
+                  <div class="input-box" style="margin-top: 16px; width: 100%;">
                       <input type="submit" value="Entrar">
                   </div>
-
-                  <!-- <div class="input-box">
-                     <p>Ainda não tem uma conta? <a href="#">Crie uma conta agora</a></p>
-                  </div> -->
-              </form>
-              
+                  <% if (erro) { %>
+                    <div class="alert alert-danger mt-5" role="alert"><%= erro %></div>
+                  <% } %>
+              </form>              
           </div>
       </div>
   </div>
 </body>
+</html>
 
-<%- include('../shared/footer') %>
 
