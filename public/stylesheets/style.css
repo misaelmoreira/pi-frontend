@@ -518,6 +518,7 @@ body.menu-expanded button path {
 }
 
 #contact input {
+  width: 100%;
   background-color: #f7f9f9c7;
   font-size: 1.4rem;
 }
