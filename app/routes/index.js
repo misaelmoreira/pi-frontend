@@ -14,18 +14,20 @@ router.get('/', HomeController.index);
 /* Rotas User Login page. */
 router.get('/loginUser',  LoginUserController.index);
 router.post('/loginUser', LoginUserController.autenticar);
+router.get('/logoutUser',  LoginUserController.deslogar);
 
 /* Rotas Tutor Login page. */
 router.get('/loginTutor', LoginTutorController.index);
 router.post('/loginTutor', LoginTutorController.autenticar);
+router.get('/logoutTutor', LoginTutorController.deslogar);
 
 /* Rotas Usuarios */
 router.get('/usuarios', LoginUserMiddleware, UsuariosController.index);
-router.get('/usuarios/novo', UsuariosController.novo);
-router.post('/usuarios/cadastrar', UsuariosController.cadastrar);
-router.get('/usuarios/:id/editar', UsuariosController.editar);
-router.post('/usuarios/:id/atualizar', UsuariosController.atualizar);
-router.get('/usuarios/:id/excluir', UsuariosController.excluir);
+router.get('/usuarios/novo', LoginUserMiddleware, UsuariosController.novo);
+router.post('/usuarios/cadastrar', LoginUserMiddleware, UsuariosController.cadastrar);
+router.get('/usuarios/:id/editar', LoginUserMiddleware, UsuariosController.editar);
+router.post('/usuarios/:id/atualizar', LoginUserMiddleware, UsuariosController.atualizar);
+router.get('/usuarios/:id/excluir', LoginUserMiddleware, UsuariosController.excluir);
 
 /* Rotas Tutores */
 router.get('/tutores', LoginTutorMiddleware, TutoresController.index);

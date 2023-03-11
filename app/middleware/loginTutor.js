@@ -3,7 +3,7 @@ const Cookie = require("../helpers/cookie");
 module.exports = (req, res, next) => {
   let tutor = Cookie.get(req, "tutor");
   tutor = unescape(tutor);
-  if (!tutor) return res.redirect("/loginTutor");
+  if (!tutor || tutor === "undefined") return res.redirect("/loginTutor");
 
   try {
     tutor = JSON.parse(tutor);

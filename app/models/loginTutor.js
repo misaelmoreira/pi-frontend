@@ -4,10 +4,10 @@ var LoginTutor = function (loginTutor) {
   this.restName = "loginTutor";
 
   if (loginTutor != undefined) {
-    this.loginTutor = usuario.loginTutor;
-    this.senha = usuario.senha;
+    this.login = loginTutor.login;
+    this.senha = loginTutor.senha;
   } else {
-    this.loginTutor = "";
+    this.login = "";
     this.senha = "";
   }
 };

@@ -28,7 +28,7 @@ var LoginTutorController = {
   },
   deslogar: function (req, res, next) {
     Cookie.remove(res, "tutor");
-    res.redirect("/login");
+    res.redirect("/");
   },
 };
 
