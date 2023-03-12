@@ -20,20 +20,24 @@
     <!-- Bootstrap icons -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
 
+    <!-- Jquery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
 
   </head>
   <body>
-    <nav class="navbar navbar-expand-lg navbar-light" style="display: flex;justify-content: space-evenly; background-color: #DCE9E2;" >
+    <div id="menu"
+      class="navbar navbar-expand-lg navbar-light"
+    >
       <div class="container" id="" style="justify-content: space-between; display: flex; gap: 100px" >
         <a class="navbar-brand" href="/">
             <img src="/img/SenseiDev.png" alt="">
         </a>
         <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
-          <li class="nav-item active">
-            <a class="nav-link" href="#">Inicio</a>
+          <li class="nav-item">
+            <a class="menu-link active" href="#">Inicio</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Tutores</a>
+            <a class="menu-link" href="#">Tutores</a>
           </li>         
         </ul>
         <form
@@ -45,4 +49,4 @@
           </a>
         </form>
       </div>
-    </nav>
+    </div>
