@@ -956,3 +956,30 @@ footer .social-links {
     margin-bottom: 0
   } */
 }
+
+
+.card-tutor {
+  width: 130px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.content-tutor{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.card-usuario {
+  width: 130px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.content-usuario{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}

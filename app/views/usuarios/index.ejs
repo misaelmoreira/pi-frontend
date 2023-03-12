@@ -1,36 +1,29 @@
 <%- include('../shared/header_usuario') %>
 
-<div class="container">
-    <!-- <%- include('../shared/home') %> -->
-   <h1>Usuarios</h1> 
-   <p>Dados do Usuario na API</p>
-
-   <input type="button" id="novo-registro" onclick="window.location = '/usuarios/novo'" value="Novo" />
-   <table>
-        <tr>
-            <td>ID</td>
-            <td>Nome</td>
-            <td>Login</td>
-            <td>Senha</td>
-            <td>E-mail</td>
-            <td class="alterar">Alterar</td>
-            <td class="excluir">Excluir</td>
-        </tr>
-       <% for(var i = 0; i < usuarios.length; i++){ 
-           var usuario = usuarios[i];           
-        %>
-       <tr>
-           <td><%= usuario.id %></td>
-           <td><%= usuario.nome %></td>
-           <td><%= usuario.login %></td>
-           <td><%= usuario.senha %></td>
-           <td><%= usuario.email %></td>
-           <td><input type="button" onclick="window.location = '/usuarios/<%= usuario.id %>/editar'" value="Alterar" /></td>
-           <td><input type="button" onclick= "excluir(<%= usuario.id %>, '/usuarios/<%= usuario.id %>/excluir')" value="Excluir" /></td>
-        </tr>
-        <% } %>
-   </table>
-    
-</div>
+<section id="home">
+    <div class="wrapper">
+      <div class="col-a">        
+        <header>
+          <h4>BEM VINDOS A SENSEIDEV 👋</h4>
+          <h1>Alunos precisando de suporte:</h1>
+        </header>  
+        <div class="content-usuario">
+            <% for(var i = 0; i < usuarios.length; i++){ 
+                var usuario = usuarios[i];           
+             %>
+            <div class="card-usuario">
+                <div>
+                    <i class="bi bi-person-circle" style="font-size: 30px;"></i> 
+                </div>
+                <div>
+                    <p><%= usuario.nome %></p>
+                </div>       
+            </div>
+             <% } %> 
+        </div>
+      </div> 
+         
+    </div>
+</section>
 
 <%- include('../shared/footer') %>
