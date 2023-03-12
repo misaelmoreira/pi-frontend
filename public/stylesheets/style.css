@@ -146,7 +146,7 @@ img {
 }
 
 section {
-  padding-block: 10rem;
+  /* padding-block: 10rem; */
 }
 
 section header h4 {
@@ -249,13 +249,10 @@ body.menu-expanded #navigation .logo path,
 /*=== NAVIGATION =================================*/
 nav {
   display: flex;
-
-  height: var(--nav-height);
-
+  /* height: var(--nav-height); */
   position: fixed;
   top: 0;
-  width: 100vw;
-
+  /* width: 100vw; */
   z-index: 100;
 }
 
@@ -266,7 +263,7 @@ nav .wrapper {
 }
 
 nav.scroll {
-  background: var(--primary-color);
+  background: #DCE9E2;
 }
 
 nav button {
@@ -376,13 +373,46 @@ body.menu-expanded button path {
   stroke: white;
 }
 
-/*=== #HOME =================================*/
-#home {
-  padding-block: 0;
-  padding-top: calc(4.1rem + var(--nav-height));
+/*=== #menu =================================*/
+
+#menu{
+  display: flex;
+  justify-content: space-evenly;
+  background-color: #DCE9E2;
+  font-size: 16px;
+  padding: 0;
 }
 
-#home::before {
+.nav-item{
+  display: flex;
+  align-items: center;
+  padding-right: 32px;
+  height: 72px;
+}
+
+.menu-link{
+  display: flex;
+  align-items: center;
+  height: 72px;
+  text-decoration: none;
+  color: #3F3E77;
+  opacity: 0.7;
+}
+
+.active{  
+  border-bottom: solid 1px #3F3E77;
+  opacity: 1;
+}
+
+/*=== #HOME =================================*/
+#home {
+  padding-bottom: 150px;
+  /* padding-block: 0;
+  padding-top: calc(4.1rem + var(--nav-height)); */
+  background-color: #DCE9E2;
+}
+
+/* #home::before {
   content: '';
   width: 100%;
   height: calc(76% + var(--nav-height));
@@ -393,7 +423,7 @@ body.menu-expanded button path {
   top: 0;
   left: 0;
   z-index: -1;
-}
+} */
 
 #home .button {
   margin-inline: auto;
@@ -415,7 +445,7 @@ body.menu-expanded button path {
   object-position: 0 2rem;
 }
 
-#home .stats {
+/* #home .stats {
   width: 100%;
   padding-block: 4rem;
   margin-inline: auto;
@@ -428,9 +458,9 @@ body.menu-expanded button path {
   flex-direction: column;
   justify-content: center;
   gap: 6rem;
-}
+} */
 
-#home .stat h3 {
+/* #home .stat h3 {
   font-size: 4.8rem;
   color: var(--headline);
   line-height: 130%;
@@ -443,9 +473,54 @@ body.menu-expanded button path {
   color: var(--primary-color);
   font-size: 1.6rem;
   line-height: 150%;
+} */
+
+/* stats */
+
+#status{
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  margin-top: -100px;
+  height: 210px;
+}
+
+#status .stats {
+  width: 710px;
+  align-items: center;
+  /* padding-block: 4rem; */
+  /* margin-inline: auto; */
+
+  background-color: var(--brand-beige);
+  border: 1px solid var(--brand-light);
+  border-radius: 0.6rem;
+
+  display: flex;
+  /* flex-direction: column; */
+  justify-content: center;
+  gap: 6rem;
+}
+
+#status .stat h3 {
+  font-size: 4.8rem;
+  color: var(--headline);
+  line-height: 130%;
+
+  margin-bottom: 0.4rem;
+}
+
+#status .stat p {
+  margin: 0;
+  color: var(--primary-color);
+  font-size: 1.6rem;
+  line-height: 150%;
 }
 
 /*=== SERVICES =================================*/
+#services{
+  margin-top: 100px;
+}
+
 #services header h2 {
   margin-bottom: 6rem;
 }
@@ -620,7 +695,7 @@ footer .social-links {
   }
 
   section {
-    padding-block: 16rem;
+    /* padding-block: 16rem; */
   }
 
   section header h2 {
@@ -803,7 +878,7 @@ footer .social-links {
   }
 
   /*=== SERVICES =================================*/
-  #services h2 {
+  /* #services h2 {
     width: 47rem;
     margin-inline: auto;
   }
@@ -817,10 +892,10 @@ footer .social-links {
   #services .card {
     width: 30%;
     flex-grow: 1;
-  }
+  } */
 
   /*=== ABOUT =================================*/
-  #about .wrapper {
+  /* #about .wrapper {
     grid-template-columns: 48rem 1fr;
     grid-template-areas: 'B A';
     gap: 6.7rem;
@@ -832,21 +907,21 @@ footer .social-links {
 
   #about .content p {
     margin-bottom: 0;
-  }
+  } */
 
   /*=== CONTACT =================================*/
 
-  #contact .wrapper {
+  /* #contact .wrapper {
     grid-template-columns: 1fr 57.5rem;
     grid-template-areas: 'A B';
-  }
+  } */
 
   /* #contact h2 {
     width: 40.4rem;
   } */
 
   /*=== FOOTER =================================*/
-  footer {
+  /* footer {
     padding-block: 8rem;
   }
   
@@ -867,5 +942,5 @@ footer .social-links {
 
   footer p {
     margin-bottom: 0
-  }
+  } */
 }
